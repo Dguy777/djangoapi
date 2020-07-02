@@ -1,1 +1,1 @@
-# mydjango
+# djangoapi
