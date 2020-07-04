@@ -22,3 +22,7 @@ def learn(request):
 
 def cards(request):
 		return render(request, 'cards.html', {})
+
+
+def welcome(request):
+		return render(request, 'welcome.html', {})

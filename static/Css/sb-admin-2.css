@@ -4680,7 +4680,7 @@ input[type="button"].btn-block {
   padding: 0.25em 0.4em;
   font-size: 75%;
   font-weight: 700;
-  line-height: 2;
+  line-height: 1;
   text-align: center;
   white-space: nowrap;
   vertical-align: baseline;
@@ -8450,7 +8450,7 @@ button.bg-dark:focus {
   }
   .mb-md-n1,
   .my-md-n1 {
-    margin-bottom: -0.25rem !important;
+    margin-bottom: -0.25rem !important; 
   }
   .ml-md-n1,
   .mx-md-n1 {
@@ -9327,6 +9327,10 @@ button.bg-dark:focus {
 
 .text-lowercase {
   text-transform: lowercase !important;
+}
+
+.ion-icon {
+  font-size: 64px;
 }
 
 .text-uppercase, .dropdown .dropdown-menu .dropdown-header, .sidebar .sidebar-heading {
