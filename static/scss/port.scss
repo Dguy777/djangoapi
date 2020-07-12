@@ -1,32 +1,35 @@
-:root {
-  --primary-color: #302AE6;
-  --secondary-color: #536390;
-  --font-color: #424242;
-  --bg-color: #fff;
-  --heading-color: #292922;
+@import url(https://fonts.googleapis.com/css?family=Lato:400,400italic,700|Sansita+One);
+  
+ :root {
+    --primary-color: #302AE6;
+    --secondary-color: #536390;
+    --font-color: #424242;
+    --bg-color: #fff;
+    --heading-color: #292922;
 }
 
 [data-theme="dark"] {
-  --primary-color: #9A97F3;
-  --secondary-color: #818cab;
-  --font-color: #e1e1ff;
-  --bg-color: #161625;
-  --heading-color: #818cab;
+    --primary-color: #9A97F3;
+    --secondary-color: #818cab;
+    --font-color: #e1e1ff;
+    --bg-color: #161625;
+    --heading-color: #818cab;
 }
 
 body {
   font-family: "Lato", sans-serif;
   background-color: var(--bg-color);
   color: var(--font-color);
+  max-width: 90%;
   margin: 0 auto;
   font-size: calc(1rem + 0.25vh);
 }
 
 h1 {
-  color: var(--heading-color);
-  font-family: "Sansita One", serif;
-  font-size: 2rem;
-  margin-bottom: 1vh;
+    color: var(--heading-color);
+    font-family: "Sansita One", serif;
+    font-size: 2rem;
+    margin-bottom: 1vh;
 }
 
 p {
@@ -39,9 +42,9 @@ a {
   text-decoration: none;
   border-bottom: 3px solid transparent;
   font-weight: bold;
-}
-a:hover, a:focus {
-  border-bottom: 3px solid currentColor;
+  &:hover, &:focus {
+      border-bottom: 3px solid currentColor;
+  }
 }
 
 section {
@@ -64,24 +67,24 @@ nav {
 }
 
 /*slider switch css */
-/*.theme-switch-wrapper {
+.theme-switch-wrapper {
   display: flex;
   align-items: center;
-}*/
-.theme-switch-wrapper em {
-  margin-left: 10px;
-  font-size: 1rem;
+  
+  em {
+    margin-left: 10px;
+    font-size: 1rem;
+  }
 }
-
 .theme-switch {
   display: inline-block;
-  height: 26px;
+  height: 34px;
   position: relative;
-  width: 40px;
+  width: 60px;
 }
 
 .theme-switch input {
-  display: none;
+  display:none;
 }
 
 .slider {
@@ -99,11 +102,11 @@ nav {
   background-color: #fff;
   bottom: 4px;
   content: "";
-  height: 20px;
+  height: 26px;
   left: 4px;
   position: absolute;
   transition: .4s;
-  width: 20px;
+  width: 26px;
 }
 
 input:checked + .slider {
@@ -111,13 +114,13 @@ input:checked + .slider {
 }
 
 input:checked + .slider:before {
-  transform: translateX(20px);
+  transform: translateX(26px);
 }
 
 .slider.round {
-  border-radius: 28px;
+  border-radius: 34px;
 }
 
 .slider.round:before {
-  border-radius: 40%;
+  border-radius: 50%;
 }

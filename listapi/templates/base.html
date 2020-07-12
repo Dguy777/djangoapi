@@ -1,25 +1,40 @@
-
+  
 {% load static %}
 
 
 <!DOCTYPE html>
 <html lang="en">
   <head>
+   <title>-DG Portfolio-</title>
     <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-     <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+  <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
   <link href="{% static 'Css/sb-admin-2.min.css'%}" rel="stylesheet" type="text/css">
-  <link rel="stylesheet" type="text/css" href="{% static 'Css/port.css'%}">
+  <link rel="stylesheet" type="text/css" href="{% static 'Css/port.css'%}" type="text/css">
   <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Lato:400,400italic,700|Sansita+One" rel="stylesheet">
     <!-- Custom styles for this template-->
   <link href="{% static 'Css/sb-admin-2.css'%}" rel="stylesheet">
-    <title>-DG Portfolio-</title>
+   
   </head>
+
+
   <body>
 
+ <div class="theme-switch-wrapper"> 
+  
   	<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      
+       <label class="theme-switch" for="checkbox">
+    <input type="checkbox" id="checkbox" />
+    <div class="slider round"></div>
+  </label>
+    
+  
+ 
+
   <a class="navbar-brand" href="{% url 'welcome' %}">Welcome!</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
@@ -39,6 +54,8 @@
         <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Connect</a>
       </li>
     </ul>
+    
+
   </div>
   <ul class="nav-item dropdown no-arrow">
                 <!-- Counter - Alerts -->
@@ -143,20 +160,34 @@
                     <img class="img-profile rounded-circle" style="width: 60px; height: 60px" src="{% static 'img/Dg_headshot.png'%}" alt="">
               
       </nav>
-  
-   <hr>
-   <br>
-{% block content %}
 
-  {% endblock %}
+ </div>
+ <!--    <article class="post">
+      <h1>The Principles of Good Design</h1>
+      <p class="post-meta">Circa 2014 <span>by</span> Ian Daniel Stewart</p>
+
+      <p>Is <strong>beauty</strong> objectively true? Are there principles you can use to guide you to it in your work? Can designers from both the sciences and the arts look at each others work and find <strong class="sevenhundred">beauty</strong>? These are important questions for all designers.</p>
+
+      <p>For those of us who design things … we need to be able to recognize it. We need good taste to make good things. Instead of treating <strong class="eighthundred">beauty</strong> as an airy abstraction, to be either blathered about or avoided depending on how one feels about airy abstractions, let’s try considering it as a practical question: how do you make good stuff?</p>
+ <a href="#">Read More</a>
+  </article> -->
+
+
+
+   <hr>
+   {%block content%}
+ 
+
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+     <script src="{% static 'vender/jq/port.js'%}"></script>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
 
-	
+
+ {%endblock%}
 
   </body>
 </html>
